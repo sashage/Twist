@@ -14,7 +14,7 @@ function shadowsocksconfig(){
     TIMEOUT="600"
     METHOD="xchacha20-ietf-poly1305"
     OBFS="tls"
-    OBFSHOST="mzstatic.com"
+    OBFSHOST="google.com"
     OBFSURI="/"
     BBR="enable"
     FWS="enable"
