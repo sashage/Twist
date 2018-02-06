@@ -56,9 +56,9 @@ Edit values in typename="**HERE**", save and run Twist after you have confirmed 
  METHOD="xchacha20-ietf-poly1305" # Encryption, AEAD is better than OTA
  OBFS="tls"                       # Obfs method using tls or http
  OBFSHOST="outlook.office365.com" # Obfs host address
- OBFSURI="/EWS/Exchange.asmx"                      # Obfs specify the client request path uri
+ OBFSURI="/EWS/Exchange.asmx"     # Obfs specify the client request path uri
  BBR="enable"                     # Google BBR for low delay network to get faster speed
- FWS="enable"                     # Fake as a apache web server for concealing
+ FWS="disable"                     # Fake as a apache web server for concealing
  ABB="enable"                     # Uses Fail2ban to ban force crackers
 ```
 
