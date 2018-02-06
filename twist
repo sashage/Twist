@@ -509,9 +509,11 @@ function configsslibev(){
     "udp_timeout":${TIMEOUT},
     "method":"${METHOD}",
     "plugin":"obfs-server",
-    "plugin_opts":"obfs=${OBFS};fast-open;${OBFSLOCAL}=${OBFSHOST}${OBFSURL}",
+    "plugin_opts":"obfs=${OBFS};${OBFSLOCAL}=${OBFSHOST}${OBFSURL}",
     "mode":"tcp_and_udp",
     "fast_open":true,
+    "no_delay":true,
+    "reuse_port":true,
 }
 EOF
     if ! grep -qs "Twist" /etc/sysctl.conf; then
@@ -828,7 +830,7 @@ ssserver_start() {
         echo -e "# \033[32;1mShadowsocks-libev is Running... \033[0m"
         return 0
     fi
-    ${ssserverpath} -uv -c /etc/shadowsocks-libev/config.json -f /var/run/shadowsocks-libev.pid
+    ${ssserverpath} -v -c /etc/shadowsocks-libev/config.json -f /var/run/shadowsocks-libev.pid
     [ -e /var/log/twistprotect ] || touch /var/log/twistprotect
     if ssserver_check; then
         echo -e "# \033[32;1mStarting Shadowsocks-libev Success... \033[0m"
