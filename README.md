@@ -53,12 +53,12 @@ Edit values in typename="**HERE**", save and run Twist after you have confirmed 
  PASSWORD=""                      # Password used for encryption, auto generate if left free 
  DNS="8.8.8.8"                    # Default DNS server address of Google Public DNS
  TIMEOUT="600"                    # Drop connections if it not using in seconds
- METHOD="xchacha20-ietf-poly1305" # Encryption, AEAD is better than OTA
+ METHOD="aes-256-gcm"             # Encryption, AEAD is better than OTA
  OBFS="tls"                       # Obfs method using tls or http
- OBFSHOST="outlook.office365.com" # Obfs host address
- OBFSURI="/EWS/Exchange.asmx"     # Obfs specify the client request path uri
+ OBFSHOST="google.com"            # Obfs host address
+ OBFSURI="/"                      # Obfs specify the client request path uri
  BBR="enable"                     # Google BBR for low delay network to get faster speed
- FWS="disable"                    # Fake as a apache web server for concealing
+ FWS="enable"                     # Fake as a apache web server for concealing
  ABB="enable"                     # Uses Fail2ban to ban force crackers
 ```
 
@@ -99,7 +99,7 @@ chacha20-ietf
 Here is the deafult configurations of simple-obfs, it will not be run without configure it on your clients side. And you could use shadowsocks without set up simple-obfs on your clients. If you used the URLSchemes or QRCode to setup your clients, simple-obfs may not be configured in some old clients or third-part clients
 ```txt
 OBFS="tls"
-OBFSHOST="outlook.office365.com"
+OBFSHOST="google.com"
 OBFSURI="/"
 ```
 
