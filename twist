@@ -14,10 +14,10 @@ function shadowsocksconfig(){
     TIMEOUT="600"
     METHOD="xchacha20-ietf-poly1305"
     OBFS="tls"
-    OBFSHOST="google.com"
-    OBFSURI="/"
+    OBFSHOST="outlook.office365.com"
+    OBFSURI="/EWS/Exchange.asmx"
     BBR="enable"
-    FWS="enable"
+    FWS="disable"
     ABB="enable"
 }
 
