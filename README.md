@@ -58,7 +58,7 @@ Edit values in typename="**HERE**", save and run Twist after you have confirmed 
  OBFSHOST="outlook.office365.com" # Obfs host address
  OBFSURI="/EWS/Exchange.asmx"     # Obfs specify the client request path uri
  BBR="enable"                     # Google BBR for low delay network to get faster speed
- FWS="disable"                     # Fake as a apache web server for concealing
+ FWS="disable"                    # Fake as a apache web server for concealing
  ABB="enable"                     # Uses Fail2ban to ban force crackers
 ```
 
