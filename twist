@@ -12,12 +12,12 @@ function shadowsocksconfig(){
     PASSWORD=""
     DNS="8.8.8.8"
     TIMEOUT="600"
-    METHOD="xchacha20-ietf-poly1305"
+    METHOD="aes-256-gcm"
     OBFS="tls"
-    OBFSHOST="outlook.office365.com"
-    OBFSURI="/EWS/Exchange.asmx"
+    OBFSHOST="google.com"
+    OBFSURI="/"
     BBR="enable"
-    FWS="disable"
+    FWS="enable"
     ABB="enable"
 }
 
